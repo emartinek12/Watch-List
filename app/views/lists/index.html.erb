@@ -3,7 +3,9 @@
 <ul class="list-group">
     <% @lists.each do |list| %>
       <li class="list-group-item">
-        <%= link_to list.name, list_path(list)%> |
+        <%= link_to list.name, list%> |
       </li>
     <% end %>
 </ul>
+
+<%= link_to 'Add List', new_list_path %>

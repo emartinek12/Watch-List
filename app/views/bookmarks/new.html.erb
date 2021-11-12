@@ -1,5 +1,11 @@
-<%= simple_form_for @bookmark do |f| %>
+
+<div class="container">
+  <h2>Add a Bookmark to <%= @list.name %></h2>
+
+  <%# <%= simple_form_for([@parent, @child]) do |f| %>
+  <%= simple_form_for([@list, @bookmark]) do |f| %>
     <%= f.input :comment %>
-    <%= f.association :movie, collection: %w[Drama Comedy Classic Rewatch] %>
-    <%= f.submit 'Leave a review', class: 'btn btn-primary' %>
-<% end %>
+    <%= f.association :movie %>
+    <%= f.submit 'Add bookmark', class: 'btn btn-primary' %>
+  <% end %>
+</div>
